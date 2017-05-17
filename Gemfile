@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+# gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'spree', '~> 3.2.0'
 gem 'spree_auth_devise', '~> 3.2.0.beta'
 gem 'spree_gateway', '~> 3.2.0.beta'
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
+# gem 'nokogiri', '~> 1.6.7.2', '>= 1.6.7.2'
+# gem "spree_correios"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
