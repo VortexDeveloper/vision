@@ -30,12 +30,18 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'awesome_print'
+
 gem 'spree', '~> 3.2.0'
 gem 'spree_auth_devise', '~> 3.2.0.beta'
 gem 'spree_gateway', '~> 3.2.0.beta'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
-# gem 'nokogiri', '~> 1.6.7.2', '>= 1.6.7.2'
-# gem "spree_correios"
+gem 'spree_social', github: 'spree-contrib/spree_social'
+# gem 'correios-frete'
+# gem "spree_pag_seguro"
+# gem 'nokogiri', '~> 1.6', '>= 1.6'
+# gem 'correios-frete', '~> 1.11.0'
+# gem "spree_correios", path: '/home/arthur/workspace/ruby/spree_correios'
 
 
 group :development, :test do

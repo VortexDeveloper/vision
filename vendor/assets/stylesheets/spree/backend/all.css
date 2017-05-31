@@ -8,3 +8,9 @@
  *= require_self
  *= require_tree .
 */
+
+
+.navbar-inverse {
+    background-color: #1998f7;
+    border-color: #09131a;
+}
