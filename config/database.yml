@@ -23,7 +23,7 @@ default: &default
 
 local: &local
 
-  username: arthur
+  # username: arthur
   # username: vortex
 
 development:
