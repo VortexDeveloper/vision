@@ -2,12 +2,20 @@ require_relative 'boot'
 
 require 'rails/all'
 
+
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Vision
   class Application < Rails::Application
+    PagarMe.api_key        = ENV['PAGARME_API_KEY']
+    PagarMe.encryption_key = ENV['PAGARME_ENCRYPTION_KEY']
+
+    config.after_initialize do
+      Rails.configuration.spree.payment_methods << Spree::Gateway::Pagarme
+    end
 
     config.to_prepare do
       # Load application's model / class decorators
