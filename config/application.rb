@@ -13,9 +13,6 @@ module Vision
     PagarMe.api_key        = ENV['TEST_PAGARME_API_KEY']
     PagarMe.encryption_key = ENV['TEST_PAGARME_ENCRYPTION_KEY']
 
-    # PagarMe.api_key = "ak_live_WnpozJ9gU0Tdna1vLNEoh9xJwszimA"
-    # PagarMe.encryption_key = "ek_live_QNwi6wvjfU8BoMP31XXPpdUhwaZeIr"
-
     config.after_initialize do
       Rails.configuration.spree.payment_methods << Spree::Gateway::Pagarme
     end
