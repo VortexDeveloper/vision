@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/spree-contrib/spree_i18n.git
-  revision: 14b7fa64e33eb0f7e65014d62785d937469b0b9c
+  revision: 31f9011a035106034eaacf94a9e4f936ad4208c1
   specs:
     spree_i18n (3.2.0.alpha)
       i18n_data
