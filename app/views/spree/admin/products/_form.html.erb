@@ -27,6 +27,14 @@
           <%= f.error_message_on :description %>
         <% end %>
       </div>
+
+      <div data-hook="admin_product_form_score">
+        <%= f.field_container :score, class: ['form-group'] do %>
+          <%= f.label :score, Spree.t(:score) %>
+          <%= f.number_field :score %>
+          <%= f.error_message_on :score %>
+        <% end %>
+      </div>
     </div>
 
     <div class="col-md-4" data-hook="admin_product_form_right">

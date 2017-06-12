@@ -38,4 +38,12 @@
       <%= f.error_message_on :password_confirmation %>
     <% end %>
   </div>
+
+  <div data-hook="admin_user_form_score">
+    <%= f.field_container :score, class: ['form-group'] do %>
+      <%= f.label :score, Spree.t(:score) %>
+      <%= @user.score %>
+      <%= f.error_message_on :score %>
+    <% end %>
+  </div>
 </div>

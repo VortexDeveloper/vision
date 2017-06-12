@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519192427) do
+ActiveRecord::Schema.define(version: 20170609160236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -410,6 +410,7 @@ ActiveRecord::Schema.define(version: 20170519192427) do
     t.boolean  "promotionable",        default: true
     t.string   "meta_title"
     t.datetime "discontinue_on"
+    t.integer  "score"
     t.index ["available_on"], name: "index_spree_products_on_available_on", using: :btree
     t.index ["deleted_at"], name: "index_spree_products_on_deleted_at", using: :btree
     t.index ["discontinue_on"], name: "index_spree_products_on_discontinue_on", using: :btree
@@ -1000,6 +1001,7 @@ ActiveRecord::Schema.define(version: 20170519192427) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.integer  "sex"
+    t.integer  "score",                              default: 0
     t.index ["bill_address_id"], name: "index_spree_users_on_bill_address_id", using: :btree
     t.index ["deleted_at"], name: "index_spree_users_on_deleted_at", using: :btree
     t.index ["email"], name: "email_idx_unique", unique: true, using: :btree

@@ -34,6 +34,11 @@
             <%= product_description(@product) %>
           </div>
 
+          <div>
+            <label>Pontos: </label>
+            <%= @product.score%>
+          </div>
+
           <div id="cart-form" data-hook="cart_form">
             <%= render partial: 'cart_form' %>
           </div>
