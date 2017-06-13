@@ -34,10 +34,12 @@
             <%= product_description(@product) %>
           </div>
 
-          <div>
-            <label>Pontos: </label>
-            <%= @product.score%>
-          </div>
+          <% if current_spree_user && current_spree_user.dealer %>
+            <div>
+              <label>Pontos na revenda: </label>
+              <%= @product.score%>
+            </div>
+          <% end %>
 
           <div id="cart-form" data-hook="cart_form">
             <%= render partial: 'cart_form' %>

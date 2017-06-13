@@ -6,8 +6,10 @@
 <%= link_to 'Editar', edit_account_path%>
 </div>
 
-<h1>Meus pontos</h1>
-<%= @user.score %> <br/><br/>
+<% if @user.dealer %>
+  <h1>Meus pontos</h1>
+  <%= @user.score %> <br/><br/>
+<% end %>
 
 <div>
 <h1>Meus Pedidos</h1>

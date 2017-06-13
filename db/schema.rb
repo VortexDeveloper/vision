@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170609160236) do
+ActiveRecord::Schema.define(version: 20170613163128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -978,8 +978,8 @@ ActiveRecord::Schema.define(version: 20170609160236) do
     t.string   "persistence_token"
     t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "sign_in_count",                      default: 0, null: false
-    t.integer  "failed_attempts",                    default: 0, null: false
+    t.integer  "sign_in_count",                      default: 0,     null: false
+    t.integer  "failed_attempts",                    default: 0,     null: false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
@@ -992,8 +992,8 @@ ActiveRecord::Schema.define(version: 20170609160236) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.datetime "reset_password_sent_at"
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
     t.string   "spree_api_key",          limit: 48
     t.datetime "remember_created_at"
     t.datetime "deleted_at"
@@ -1002,6 +1002,7 @@ ActiveRecord::Schema.define(version: 20170609160236) do
     t.datetime "confirmation_sent_at"
     t.integer  "sex"
     t.integer  "score",                              default: 0
+    t.boolean  "dealer",                             default: false
     t.index ["bill_address_id"], name: "index_spree_users_on_bill_address_id", using: :btree
     t.index ["deleted_at"], name: "index_spree_users_on_deleted_at", using: :btree
     t.index ["email"], name: "email_idx_unique", unique: true, using: :btree
