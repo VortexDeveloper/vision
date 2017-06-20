@@ -15,6 +15,7 @@ module Vision
 
     config.after_initialize do
       Rails.configuration.spree.payment_methods << Spree::Gateway::Pagarme
+      # Rails.application.config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::CorreiosFrete
     end
 
     config.to_prepare do
