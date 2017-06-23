@@ -26,3 +26,4 @@ end
 Spree.user_class = "Spree::User"
 
 Spree::PermittedAttributes.user_attributes.push << :sex
+Spree::PermittedAttributes.user_attributes.push << :dealer

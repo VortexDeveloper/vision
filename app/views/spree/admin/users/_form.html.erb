@@ -46,4 +46,16 @@
       <%= f.error_message_on :score %>
     <% end %>
   </div>
+
+  <div data-hook="admin_user_form_dealer">
+    <%= f.field_container :dealer, class: ['form-group'] do %>
+      <%= f.label :dealer, Spree.t(:dealer) %>
+      <br>
+      <%= f.radio_button :dealer, false, checked: (@user.dealer == false) %>
+      <%= f.label :dealer, "Não Revendedor" %> <br>
+      <%= f.radio_button :dealer, true, checked: (@user.dealer == true) %>
+      <%= f.label :dealer, "Revendedor" %>
+      <%= f.error_message_on :dealer %>
+    <% end %>
+  </div>
 </div>
