@@ -1,4 +1,6 @@
 Spree::Order.class_eval do
+  has_one :survey, dependent: :destroy
+
   def add_score_to_user
     user = Spree::User.find(user_id)
     if(user.dealer)

@@ -1,0 +1,9 @@
+<%= render partial: 'spree/admin/shared/survey_tabs', locals: {current: :details} %>
+<%= render partial: 'spree/admin/shared/error_messages', locals: { target: @survey } %>
+
+<%= form_for [:admin, @survey], method: :put, html: { multipart: true } do |f| %>
+  <fieldset>
+    <%= render partial: 'form', locals: { f: f } %>
+    <%= button_link_to Spree.t('actions.voltar'), collection_url, :icon => 'delete' %>
+  </fieldset>
+<% end %>

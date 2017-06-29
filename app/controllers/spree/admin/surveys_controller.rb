@@ -1,2 +1,2 @@
-class Spree::Admin::SurveysController < ResourceController
+class Spree::Admin::SurveysController < Spree::Admin::ResourceController
 end

@@ -1,0 +1,37 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:surveys) %>
+<% end %>
+
+<table class="table" id="listing_products">
+  <thead>
+    <tr data-hook="admin_products_index_headers">
+        <th colspan="2"><%= Spree.t(:id) %></th>
+        <th><%= Spree.t(:name) %></th>
+        <th><%= Spree.t(:email) %></th>
+        <th><%= Spree.t(:age) %></th>
+        <th><%= Spree.t(:cpf) %></th>
+        <th><%= Spree.t(:phone_number) %></th>
+        <th><%= Spree.t(:dealer) %></th>
+        <th><%= Spree.t(:order_id) %></th>
+        <th data-hook="admin_surveys_index_header_actions" class="actions"></th>
+      </tr>
+  </thead>
+  <tbody>
+    <% @surveys.each do |survey| %>
+      <tr id="<%= spree_dom_id survey %>" data-hook="admin_surveys_index_rows" class="<%= cycle('odd', 'even') %>">
+        <td colspan="2"><%= survey.id %></td>
+        <td><%= survey.name %></td>
+        <td><%= survey.email %></td>
+        <td><%= survey.age %></td>
+        <td><%= survey.cpf %></td>
+        <td><%= survey.phone_number %></td>
+        <td><%= survey.dealer %></td>
+        <td><%= survey.order_id %></td>
+        <td class="actions actions-3 text-right" data-hook="admin_surveys_index_row_actions">
+          <%= link_to_edit survey, no_text: true, class: 'edit' if can?(:edit, survey) %>
+          <%= link_to_delete survey, no_text: true if can?(:delete, survey) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

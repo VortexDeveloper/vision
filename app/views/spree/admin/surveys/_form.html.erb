@@ -1,0 +1,47 @@
+<div data-hook="admin_survey_form_fields">
+  <div class="row">
+    <div class="col-md-8" data-hook="admin_survey_form_left">
+      <div data-hook="admin_product_form_name">
+        <%= f.field_container :name, class: ['form-group'] do %>
+          <%= f.label :name, raw(Spree.t(:name) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @survey.name %></p>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_name">
+        <%= f.field_container :email, class: ['form-group'] do %>
+          <%= f.label :email, raw(Spree.t(:email) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @survey.email %></p>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_name">
+        <%= f.field_container :age, class: ['form-group'] do %>
+          <%= f.label :age, raw(Spree.t(:age) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @survey.age %></p>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_name">
+        <%= f.field_container :cpf, class: ['form-group'] do %>
+          <%= f.label :cpf, raw(Spree.t(:cpf) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @survey.cpf %></p>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_name">
+        <%= f.field_container :phone_number, class: ['form-group'] do %>
+          <%= f.label :phone_number, raw(Spree.t(:phone_number) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @survey.phone_number %></p>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_name">
+        <%= f.field_container :dealer, class: ['form-group'] do %>
+          <%= f.label :dealer, raw(Spree.t(:dealer) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @survey.dealer %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
