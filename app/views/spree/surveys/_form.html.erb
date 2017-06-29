@@ -1,4 +1,6 @@
 <%= form_for @survey do |f| %>
+  <%= f.hidden_field :order_id, :value => @survey.order_id %>
+
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -13,4 +15,6 @@
 
   <%= f.label :phone_number %>
   <%= f.text_field :phone_number %>
+
+  <%= f.submit 'Enviar formulário' %>
 <% end %>
