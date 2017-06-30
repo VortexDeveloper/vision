@@ -223,3 +223,8 @@ pt-BR:
     admin:
       tab:
         surveys: Pesquisa de Satisfação
+
+  spree:
+    admin:
+      tab:
+        newsletters: Newsletters
