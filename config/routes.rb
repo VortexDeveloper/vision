@@ -10,8 +10,10 @@ Rails.application.routes.draw do
     namespace :admin do
       resources :surveys
       resources :newsletters
+      resources :slide_images
     end
     resources :surveys
     resources :newsletters
+    resources :slide_images
   end
 end
