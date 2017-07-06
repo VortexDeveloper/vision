@@ -1,0 +1,19 @@
+<div data-hook="admin_survey_form_fields">
+  <div class="row">
+    <div class="col-md-8" data-hook="admin_survey_form_left">
+      <div data-hook="admin_newsletter_form_name">
+        <%= f.field_container :name, class: ['form-group'] do %>
+          <%= f.label :name, raw(Spree.t(:name) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @newsletter.name %></p>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_newsletter_form_name">
+        <%= f.field_container :email, class: ['form-group'] do %>
+          <%= f.label :email, raw(Spree.t(:email) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @newsletter.email %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

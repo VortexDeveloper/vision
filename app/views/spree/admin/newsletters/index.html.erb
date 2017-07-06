@@ -1,0 +1,27 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:newsletters) %>
+<% end %>
+
+<table class="table" id="listing_newsletters">
+  <thead>
+    <tr data-hook="admin_newsletters_index_headers">
+      <th colspan="2"><%= Spree.t(:id) %></th>
+      <th><%= Spree.t(:name) %></th>
+      <th><%= Spree.t(:email) %></th>
+      <th data-hook="admin_newsletters_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @newsletters.each do |newsletter| %>
+      <tr id="<%= spree_dom_id newsletter %>" data-hook="admin_newsletters_index_rows" class="<%= cycle('odd', 'even') %>">
+        <td colspan="2"><%= newsletter.id %></td>
+        <td><%= newsletter.name %></td>
+        <td><%= newsletter.email %></td>
+        <td class="actions actions-3 text-right" data-hook="admin_newsletters_index_row_actions">
+          <%= link_to_edit newsletter, no_text: true, class: 'edit' if can?(:edit, newsletter) %>
+          <%= link_to_delete newsletter, no_text: true if can?(:delete, newsletter) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

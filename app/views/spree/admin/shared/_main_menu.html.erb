@@ -40,6 +40,12 @@
   </ul>
 <% end %>
 
+<% if can? :admin, Spree::Newsletter %>
+  <ul class="nav nav-sidebar">
+    <%= main_menu_tree Spree.t('Pesquisa de Satisfação'), icon: "gift", sub_menu: "newsletter", url: "#sidebar-newsletter" %>
+  </ul>
+<% end %>
+
 <% if can? :admin, current_store %>
   <ul class="nav nav-sidebar">
     <%= main_menu_tree Spree.t(:configurations), icon: "wrench", sub_menu: "configuration", url: "#sidebar-configuration" %>
