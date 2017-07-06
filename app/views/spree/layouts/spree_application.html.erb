@@ -1,17 +1,12 @@
-<!doctype html>
-<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
-<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
     <%= render partial: 'spree/shared/google_analytics.js' %>
     <%= render partial: 'spree/shared/header' %>
-
-    <div class="container">
+    <main>
       <div class="row" data-hook>
         <%= breadcrumbs(@taxon) %>
 
@@ -24,6 +19,62 @@
 
         <%= yield :templates %>
       </div>
-    </div>
+    </main>
+    <footer>
+      <div class="newsletter">
+        <h2>CADASTRE-SE E RECEBA NOSSAS NOVIDADES</h2>
+        <div>
+          <input type="text" name="newsletter" placeholder="Digite seu email aqui...">
+          <input type="submit" value="ENVIAR">
+        </div>
+      </div>
+      <div class="site-map">
+        <div class="content site-map-items">
+          <div class="site-map-item">
+            <h2>AJUDA E SUPORTE</h2>
+            <p>POLÍTICA DE  PRIVACIDADE</p>
+            <p>QUEM SOMOS</p>
+            <p>SEJA NOSSO PARCEIRO</p>
+          </div>
+          <div class="site-map-item">
+            <h2>CONTATOS E SOCIAL</h2>
+            <p>21 2222-2222</p>
+            <p>21 9 9999-9999</p>
+            <p><small>SEG A SEX DAS 9H ÀS 17H</small></p>
+            <h2><small>SIGA-NOS:</small></h2>
+            <%= image_tag('facebook.png') %>
+            <%= image_tag('instagram.png') %>
+            <%= image_tag('twitter.png') %>
+          </div>
+          <div class="site-map-item">
+            <h2>PAGAMENTO</h2>
+            <div class="cards">
+              <%= image_tag('visa.png') %>
+              <%= image_tag('master.png') %>
+              <%= image_tag('maestro.png') %>
+              <%= image_tag('diners.png') %>
+              <%= image_tag('american.png') %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="informations">
+        <div class="content informations-items">
+          <div class="informations-item">
+            <%= image_tag('logo_branca.png') %>
+          </div>
+          <div class="informations-item">
+            <p>OCULAR SAÚDE COMÉRCIO DE ÓCULOS</p>
+          </div>
+          <div class="informations-item">
+            <p>ENDEREÇO E CNPJ</p>
+          </div>
+          <div class="informations-item">
+            <p>DESENVOLVIDO POR VORTEX DEVELOPER</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <%= javascript_include_tag "vision" %>
   </body>
 </html>
