@@ -12,5 +12,28 @@
   <div class="form-group">
     <%= search_field_tag :keywords, params[:keywords], placeholder: Spree.t(:search), class: "form-control" %>
   </div>
-  <%= submit_tag Spree.t(:search), name: nil, class: "btn btn-success" %>
+
+  <nav class="user-nav">
+    <%= button_tag(type: "submit", class: "search-button") do %>
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    <% end %>
+    <% if spree_current_user %>
+      <li class="mobile-hide">
+        <%= link_to spree.account_path do %>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to spree.logout_path do %>
+          <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+        <% end %>
+      </li>
+    <% else %>
+      <li id="link-to-login">
+        <%= link_to spree.login_path do %>
+          <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+        <% end %>
+      </li>
+    <% end %>
+  </nav>
 <% end %>

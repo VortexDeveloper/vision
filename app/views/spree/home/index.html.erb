@@ -1,13 +1,96 @@
-<% @body_id = 'home-page' %>
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render partial: 'spree/shared/taxonomies' %>
+
+<div class="slide-container">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= image_tag('femin.jpg') %>
+        <div class="carousel-caption">
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag('femin.jpg') %>
+        <div class="carousel-caption">
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-<% end %>
-
-<div data-hook="homepage_products">
-  <% cache(cache_key_for_products) do %>
-    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
-  <% end %>
 </div>
+<section class="brands">
+<!--
+  <img src="assets/images/brand1.png" alt="Brands">
+  <img src="assets/images/brand2.png" alt="Brands">
+  <img src="assets/images/brand3.png" alt="Brands">
+  <img src="assets/images/brand4.png" alt="Brands">
+  <img src="assets/images/brand5.png" alt="Brands">
+  <img src="assets/images/brand6.png" alt="Brands">
+-->
+</section>
+<div class="content">
+  <section class="cat-glass">
+    <div class="main-cat">
+      <a class="btn-outline btn-white" href="#">ÓCULOS DE GRAU</a>
+    </div>
+    <div class="sub-cats">
+      <div class="sub-cat sol">
+        <a class="btn-outline btn-white" href="#">ÓCULOS DE SOL</a>
+      </div>
+      <div class="sub-cat lentes">
+        <a class="btn-outline btn-white" href="#">LENTES DE CONTATO</a>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="ads">
+    <div class="main-ad">
 
+    </div>
+    <div class="sub-ad">
+
+    </div>
+  </section>
+  <section class="cat-pers">
+    <div class="sub-cats-pers">
+      <div class="sub-cat-pers fem">
+        <a class="btn-outline btn-white" href="#">ARMAÇÕES FEMININAS</a>
+      </div>
+      <div class="sub-cat-pers mas">
+        <a class="btn-outline btn-white" href="#">ARMAÇÕES MASCULINAS</a>
+      </div>
+    </div>
+    <div class="main-cat-pers">
+      <a class="btn-outline btn-white" href="#">ARMAÇÕES INFANTIS</a>
+    </div>
+  </section>
+  <div class="promo">
+
+  </div>
+  <section class="cat-glass">
+    <div class="sub-cats">
+      <div class="sub-cat sol">
+        <a class="btn-outline btn-white" href="#">ÓCULOS DE SOL</a>
+      </div>
+      <div class="sub-cat lentes">
+        <a class="btn-outline btn-white" href="#">LENTES DE CONTATO</a>
+      </div>
+    </div>
+    <div class="main-cat">
+      <a class="btn-outline btn-white" href="#">ÓCULOS DE GRAU</a>
+    </div>
+  </section>
+  <section class="about-doctor">
+    <a class="btn-outline btn-black" href="#">SOBRE O DOUTOR</a>
+  </section>
+</div>
