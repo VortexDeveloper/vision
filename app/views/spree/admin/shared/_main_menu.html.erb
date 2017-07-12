@@ -46,6 +46,12 @@
   </ul>
 <% end %>
 
+<% if can? :admin, Spree::SlideImage %>
+  <ul class="nav nav-sidebar">
+    <%= main_menu_tree Spree.t('Imagem do Slide'), icon: "gift", sub_menu: "slide_image", url: "#sidebar-slide-image" %>
+  </ul>
+<% end %>
+
 <% if can? :admin, current_store %>
   <ul class="nav nav-sidebar">
     <%= main_menu_tree Spree.t(:configurations), icon: "wrench", sub_menu: "configuration", url: "#sidebar-configuration" %>

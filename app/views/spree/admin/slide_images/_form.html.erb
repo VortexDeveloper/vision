@@ -1,0 +1,26 @@
+<div data-hook="admin_slide_image_form_fields">
+  <div class="row">
+    <div class="col-md-8" data-hook="admin_slide_image_form_left">
+      <div data-hook="admin_slide_image_form_name">
+        <%= f.field_container :image_file_name, class: ['form-group'] do %>
+          <%= f.label :image_file_name, raw(Spree.t(:image_file_name) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @slide_image.image_file_name %></p>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_slide_image_form_name">
+        <%= f.field_container :image_content_type, class: ['form-group'] do %>
+          <%= f.label :image_content_type, raw(Spree.t(:image_content_type) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @slide_image.image_content_type %></p>
+        <% end %>
+      </div>
+
+      <div data-hook="admin_slide_image_form_name">
+        <%= f.field_container :image_file_size, class: ['form-group'] do %>
+          <%= f.label :image_file_size, raw(Spree.t(:image_file_size) + content_tag(:span, '', class: 'required')) %>
+          <p><%= @slide_image.image_file_size %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

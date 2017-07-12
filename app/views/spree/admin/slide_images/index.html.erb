@@ -1,0 +1,29 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:slide_images) %>
+<% end %>
+
+<table class="table" id="listing_slide_images">
+  <thead>
+    <tr data-hook="admin_slide_images_index_headers">
+        <th colspan="2"><%= Spree.t(:id) %></th>
+        <th><%= Spree.t(:image_file_name) %></th>
+        <th><%= Spree.t(:image_content_type) %></th>
+        <th><%= Spree.t(:image_file_size) %></th>
+        <th data-hook="admin_slide_images_index_header_actions" class="actions"></th>
+      </tr>
+  </thead>
+  <tbody>
+    <% @slide_images.each do |slide_image| %>
+      <tr id="<%= spree_dom_id slide_image %>" data-hook="admin_slide_images_index_rows" class="<%= cycle('odd', 'even') %>">
+        <td colspan="2"><%= slide_image.id %></td>
+        <td><%= slide_image.image_file_name %></td>
+        <td><%= slide_image.image_content_type %></td>
+        <td><%= slide_image.image_file_size %></td>
+        <td class="actions actions-3 text-right" data-hook="admin_slide_images_index_row_actions">
+          <%= link_to_edit slide_image, no_text: true, class: 'edit' if can?(:edit, slide_image) %>
+          <%= link_to_delete slide_image, no_text: true if can?(:delete, slide_image) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
