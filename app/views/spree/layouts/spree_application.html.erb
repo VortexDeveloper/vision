@@ -7,7 +7,7 @@
     <%= render partial: 'spree/shared/google_analytics.js' %>
     <%= render partial: 'spree/shared/header' %>
     <main>
-      <div class="row content" data-hook>
+      <div class="row" data-hook>
         <%= breadcrumbs(@taxon) %>
 
         <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
@@ -16,8 +16,9 @@
           <%= flash_messages %>
           <%= yield %>
         </div>
-
-        <%= yield :templates %>
+        <div class="content">
+          <%= yield :templates %>
+        </div>
       </div>
     </main>
     <footer>
