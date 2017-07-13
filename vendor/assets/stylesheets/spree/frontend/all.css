@@ -14,3 +14,7 @@
     background-color: #5cb85c;
     margin-bottom: 20px;
 }
+
+.carousel-indicators {
+    top: 685px;
+}
