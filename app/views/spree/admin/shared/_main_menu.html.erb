@@ -34,21 +34,21 @@
   </ul>
 <% end %>
 
+<% if can? :admin, Spree::SlideImage %>
+<ul class="nav nav-sidebar">
+  <%= main_menu_tree Spree.t(:slide_images), icon: "file", sub_menu: "slide_image", url: "#sidebar-slide-image" %>
+</ul>
+<% end %>
+
 <% if can? :admin, Spree::Survey %>
   <ul class="nav nav-sidebar">
-    <%= main_menu_tree Spree.t('Pesquisa de Satisfação'), icon: "gift", sub_menu: "survey", url: "#sidebar-survey" %>
+    <%= main_menu_tree Spree.t(:surveys), icon: "file", sub_menu: "survey", url: "#sidebar-survey" %>
   </ul>
 <% end %>
 
 <% if can? :admin, Spree::Newsletter %>
   <ul class="nav nav-sidebar">
-    <%= main_menu_tree Spree.t('Pesquisa de Satisfação'), icon: "gift", sub_menu: "newsletter", url: "#sidebar-newsletter" %>
-  </ul>
-<% end %>
-
-<% if can? :admin, Spree::SlideImage %>
-  <ul class="nav nav-sidebar">
-    <%= main_menu_tree Spree.t('Imagem do Slide'), icon: "gift", sub_menu: "slide_image", url: "#sidebar-slide-image" %>
+    <%= main_menu_tree Spree.t(:newsletters), icon: "file", sub_menu: "newsletter", url: "#sidebar-newsletter" %>
   </ul>
 <% end %>
 

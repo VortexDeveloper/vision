@@ -1,0 +1,18 @@
+<% content_for :page_title do %>
+  <%= link_to Spree.t(:slide_images), spree.admin_users_url %> /
+  <%= Spree.t(:new_slide_image) %>
+<% end %>
+
+<div data-hook="admin_slide_image_new_form_header">
+  <%= render :partial => 'spree/admin/shared/error_messages', :locals => { :target => @slide_image } %>
+</div>
+
+<div data-hook="admin_slide_image_new_form">
+  <%= form_for [:admin, @slide_image], url: spree.admin_slide_images_url, method: :post do |f| %>
+    <%= render :partial => 'form', :locals => { :f => f } %>
+
+    <div data-hook="admin_slide_image_new_form_buttons">
+      <%= render :partial => 'spree/admin/shared/new_resource_links' %>
+    </div>
+  <% end %>
+</div>
