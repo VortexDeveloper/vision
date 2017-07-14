@@ -2,6 +2,10 @@
   <%= Spree.t(:slide_images) %>
 <% end %>
 
+<% content_for :page_actions do %>
+  <%= button_link_to Spree.t(:new_slide_image), new_admin_slide_image_url, :class => "btn-success", :icon => 'add', :id => 'admin_new_slide_image_link' %>
+<% end %>
+
 <table class="table" id="listing_slide_images">
   <thead>
     <tr data-hook="admin_slide_images_index_headers">

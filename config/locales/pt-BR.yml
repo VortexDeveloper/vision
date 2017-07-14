@@ -220,6 +220,16 @@ pt-BR:
     pm: ''
 
   spree:
+    surveys: Pesquisa de Satisfação
+    age: Idade
+    phone_number: Número de Contato
+    dealer: Revendedor
+    newsletters: Newsletters
+    slide_images: Imagem do Slide
+    new_slide_image: Nova imagem do slide
+    image_file_name: Nome da imagem
+    image_content_type: Tipo de imagem
+    image_file_size: Tamanho da imagem
     admin:
       tab:
         surveys: Pesquisa de Satisfação
