@@ -10,6 +10,19 @@ Bundler.require(*Rails.groups)
 
 module Vision
   class Application < Rails::Application
+    
+    config.to_prepare do
+      # Load application's model / class decorators
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+
+      # Load application's view overrides
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+    end
+
     PagarMe.api_key        = ENV['TEST_PAGARME_API_KEY']
     PagarMe.encryption_key = ENV['TEST_PAGARME_ENCRYPTION_KEY']
 
